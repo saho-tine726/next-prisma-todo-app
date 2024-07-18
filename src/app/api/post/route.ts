@@ -1,32 +1,32 @@
 import { NextResponse } from "next/server";
 import { PrismaClient } from "@prisma/client";
 
-export const prisma = new PrismaClient() as any;
+const prisma = new PrismaClient();
 
 // DB接続
 async function doConnect() {
   try {
     await prisma.$connect();
   } catch (error) {
-    return Error("DB接続に失敗しました");
+    throw new Error("DB接続に失敗しました");
   }
 }
 
 // 全post取得API
-export const GET = async (req: Request, res: NextResponse) => {
+export const GET = async (req: Request) => {
   try {
     await doConnect();
     const posts = await prisma.post.findMany();
     return NextResponse.json({ message: "Success", posts }, { status: 200 });
   } catch (error) {
-    return NextResponse.json({ message: "Error", error }, { status: 500 });
+    return NextResponse.json({ message: "Error", error: error.message }, { status: 500 });
   } finally {
     await prisma.$disconnect();
   }
 };
 
 // post投稿API
-export const POST = async (req: Request, res: NextResponse) => {
+export const POST = async (req: Request) => {
   try {
     const { title, content, authorId } = await req.json();
 
@@ -41,7 +41,7 @@ export const POST = async (req: Request, res: NextResponse) => {
     });
     return NextResponse.json({ message: "Success", post }, { status: 201 });
   } catch (error) {
-    return NextResponse.json({ message: "Error", error }, { status: 500 });
+    return NextResponse.json({ message: "Error", error: error.message }, { status: 500 });
   } finally {
     await prisma.$disconnect();
   }
