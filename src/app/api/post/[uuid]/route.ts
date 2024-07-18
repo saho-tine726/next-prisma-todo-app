@@ -1,5 +1,14 @@
 import { NextResponse } from "next/server";
-import { doConnect, prisma } from "../route";
+import { prisma } from "../route";
+
+// DB接続
+async function doConnect() {
+  try {
+    await prisma.$connect();
+  } catch (error) {
+    return Error("DB接続に失敗しました");
+  }
+}
 
 // post詳細記事 取得API
 export const GET = async (req: Request, res: NextResponse) => {

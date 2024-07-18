@@ -4,7 +4,7 @@ import { PrismaClient } from "@prisma/client";
 export const prisma = new PrismaClient() as any;
 
 // DB接続
-export async function doConnect() {
+async function doConnect() {
   try {
     await prisma.$connect();
   } catch (error) {
