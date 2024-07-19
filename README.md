@@ -9,15 +9,17 @@ Next.js14を使用したtodoアプリです。各ユーザーごとにご利用�
 ## ログインテストアカウント
 
 ### テストアカウント①
-ユーザー ID:<br/>
+<b>ユーザー ID:</b><br/>
 aaa@gmail.com<br/>
-パスワード:<br/>
+<br/>
+<b>パスワード:</b><br/>
 aaaaaa
 
 ### テストアカウント②
-ユーザー ID:<br/>
+<b>ユーザー ID:</b><br/>
 bbb@gmail.com<br/>
-パスワード:<br/>
+<br/>
+<b>パスワード:</b><br/>
 bbbbbb
 
 ## 使用言語・ライブラリ・フレームワーク・ツールなど
@@ -28,16 +30,50 @@ bbbbbb
 <img src="https://img.shields.io/badge/tailwindcss-%2338B2AC.svg?style=for-the-badge&logo=tailwind-css&logoColor=white">
 <img src="https://img.shields.io/badge/React%20Hook%20Form-%23EC5990.svg?style=for-the-badge&logo=reacthookform&logoColor=white">
 </p>
+<table>
+  <tr>
+    <td>Next.js</td>
+    <td>(14.2.4)</td>
+  </tr>
+  <tr>
+    <td>React</td>
+    <td>(^18)</td>
+  </tr>
+  <tr>
+    <td>TypeScript</td>
+    <td>(^5)</td>
+  </tr>
+  <tr>
+    <td>Tailwind CSS</td>
+    <td>(^3.4.1)</td>
+  </tr>
+  <tr>
+    <td>React Hook Form</td>
+    <td>(^7.52.1)</td>
+  </tr>
+</table>
 
 ## ORM
 <p>
 <img src="https://img.shields.io/badge/Prisma-3982CE?style=for-the-badge&logo=Prisma&logoColor=white">
 </p>
+<table>
+  <tr>
+    <td>Prisma</td>
+    <td>(^5.16.2)</td>
+  </tr>
+</table>
 
 ## データベース
 <p>
 <img src="https://img.shields.io/badge/Supabase-3ECF8E?style=for-the-badge&logo=supabase&logoColor=white">
 </p>
+<table>
+  <tr>
+    <td>Supabase</td>
+    <td>(^2.44.3)</td>
+  </tr>
+</table>
 
 ## 各ページの仕様
 ### 全ページ共通
