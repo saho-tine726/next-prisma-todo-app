@@ -33,23 +33,23 @@ bbbbbb
 <table>
   <tr>
     <td>Next.js</td>
-    <td>(14.2.4)</td>
+    <td>14.2.4</td>
   </tr>
   <tr>
     <td>React</td>
-    <td>(^18)</td>
+    <td>^18</td>
   </tr>
   <tr>
     <td>TypeScript</td>
-    <td>(^5)</td>
+    <td>^5</td>
   </tr>
   <tr>
     <td>Tailwind CSS</td>
-    <td>(^3.4.1)</td>
+    <td>^3.4.1</td>
   </tr>
   <tr>
     <td>React Hook Form</td>
-    <td>(^7.52.1)</td>
+    <td>^7.52.1</td>
   </tr>
 </table>
 
@@ -60,7 +60,7 @@ bbbbbb
 <table>
   <tr>
     <td>Prisma</td>
-    <td>(^5.16.2)</td>
+    <td>^5.16.2</td>
   </tr>
 </table>
 
@@ -71,7 +71,7 @@ bbbbbb
 <table>
   <tr>
     <td>Supabase</td>
-    <td>(^2.44.3)</td>
+    <td>^2.44.3</td>
   </tr>
 </table>
 
