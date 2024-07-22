@@ -47,6 +47,11 @@ export default function useUser() {
     setupUser();
   }, [session]);
 
+  // ユーザー情報の更新
+  const updateUser = (updatedUser: UserType) => {
+    setUser(updatedUser);
+  };
+
   // ユーザーのサインアップ（新規登録）
   const signUp = async ({
     email,
@@ -83,7 +88,7 @@ export default function useUser() {
     }
   };
 
-  return { session, user, signUp, signIn, signOut, loading };
+  return { session, user, signUp, signIn, signOut, updateUser, loading };
 }
 
 // ログインしていない時にログインページに戻るフック

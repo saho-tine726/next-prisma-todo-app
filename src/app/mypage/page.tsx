@@ -12,7 +12,7 @@ type UpdateUserType = {
 };
 
 const MyPage = () => {
-  const { session, user } = useUser();
+  const { session, user, updateUser } = useUser();
   const router = useRouter();
   const [loading, setLoading] = useState(false);
 
@@ -38,7 +38,7 @@ const MyPage = () => {
     }
   }, [user, setValue]);
 
-  const updateUser = async (data: UpdateUserType) => {
+  const updateUserHandler = async (data: UpdateUserType) => {
     setLoading(true);
 
     try {
@@ -73,6 +73,9 @@ const MyPage = () => {
         }
       }
 
+      const updatedUser = await res.json();
+      updateUser(updatedUser.user);
+
       setLoading(false);
       router.push("/");
     } catch (error) {
@@ -81,9 +84,8 @@ const MyPage = () => {
     }
   };
 
-
-  const onSubmit: SubmitHandler<UpdateUserType> = (data) => {
-    updateUser(data);
+  const onSubmit: SubmitHandler<UpdateUserType> = async (data) => {
+    updateUserHandler(data);
   };
 
   if (!session) {
